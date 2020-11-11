@@ -4,7 +4,7 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
    render(): JSX.Element {
       return (
          <Html lang="en" dir="ltr">
@@ -12,14 +12,6 @@ class MyDocument extends Document {
                {/* Custom Font */}
                <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
                <meta charSet="utf-8" />
-               <style>
-                  {`
-                     body {
-                     background-color: ${process.env.NEXT_PUBLIC_THEME_BACKGROUND};
-                     color: ${process.env.NEXT_PUBLIC_THEME_FONT_COLOR};
-                     }
-                  `}
-               </style>
             </Head>
             <body>
                <Main />
@@ -48,5 +40,3 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
       styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
    };
 };
-
-export default MyDocument;

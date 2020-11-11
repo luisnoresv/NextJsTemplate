@@ -4,15 +4,16 @@ import { AppProps } from 'next/app';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '~/theme';
+import theme from '@styles/theme/index';
 
-const MyApp = (props: AppProps): JSX.Element => {
+export default function MyApp(props: AppProps): JSX.Element {
    const { Component, pageProps } = props;
 
    React.useEffect(() => {
       const jssStyles = document.querySelector('#jss-server-side');
       if (jssStyles && jssStyles.parentElement) {
-         jssStyles.parentElement.removeChild(jssStyles);
+         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+         jssStyles.parentElement!.removeChild(jssStyles);
       }
    }, []);
 
@@ -30,6 +31,4 @@ const MyApp = (props: AppProps): JSX.Element => {
          </ThemeProvider>
       </>
    );
-};
-
-export default MyApp;
+}

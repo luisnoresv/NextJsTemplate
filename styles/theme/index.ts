@@ -1,5 +1,4 @@
 // Define Theme to use for Material-UI
-
 import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
 declare module '@material-ui/core/styles/createMuiTheme' {

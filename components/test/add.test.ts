@@ -1,4 +1,5 @@
-import add from '~/utils/add';
+// This component is only for test purposes
+import add from './add';
 
 describe('adding two numbers should', () => {
 	test('should return expected when both args are non 0', () => {

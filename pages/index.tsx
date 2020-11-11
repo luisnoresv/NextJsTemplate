@@ -2,7 +2,7 @@ import React from 'react';
 import {
    GetStaticProps, NextPage, GetStaticPropsContext, GetStaticPropsResult,
 } from 'next';
-import IndexContent from '~/screens/IndexContent';
+import IndexContent from '@components/Home/IndexContent';
 
 interface IProps {
    greeting: string;

@@ -1,7 +1,7 @@
 {
    "name": "react-next-material-typescript-template",
    "version": "1.0.0",
-   "description": "This is a demo project",
+   "description": "This is a NextJs template with Typescript and Material UI",
    "main": "index.js",
    "jest": {
       "moduleFileExtensions": [
@@ -9,7 +9,7 @@
          "json",
          "ts"
       ],
-      "rootDir": "src",
+      "rootDir": "components",
       "testRegex": ".test.ts(x?)$",
       "transform": {
          "^.+\\.ts$": "ts-jest"
